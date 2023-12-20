@@ -1,0 +1,78 @@
+.header{
+  padding: 30px 0 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLeft{
+  display: flex;
+  gap: 20px;
+  .switchLang{
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .switchLangInactive{
+    color: rgba(255, 255, 255, 0.30);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+
+.headerRight{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 710px;
+  width: 100%;
+  .headerPhone{
+    color:  #FFF;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1.32px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .btnGetConsultation{
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 97%;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    padding: 23px 50px;
+    background-color: inherit;
+    border-radius: 67px;
+    border: 1px solid #FFF;
+    cursor: pointer;
+  }
+  .burgerMenuIcon{
+    width: 40px;
+    height: 40px;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    cursor: pointer;
+    .burgerLineTop{
+      width: 40px;
+      height: 3px;
+      background-color: #FFF;
+      margin-bottom: 5px;
+    }
+    .burgerLineBottom{
+      width: 25px;
+      height: 3px;
+      background-color: #FFF;
+    }
+  }
+}
