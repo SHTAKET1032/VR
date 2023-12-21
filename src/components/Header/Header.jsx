@@ -9,7 +9,13 @@ import mainLogo from "../../assets/imgs/mainLogo.svg";
 
 const Header = () =>{
 
-    const [isMenuOpen, isMenuOpenChange] = useState(false)
+    const [isMenuOpen, isMenuOpenChange] = useState(false);
+    const [isActiveLang, setActiveLang] = useState("РУ");
+
+    const handleClick = (lang) => {
+        console.log(`Вы выбрали ${lang} язык`)
+        setActiveLang(lang === "РУ" ? "EN" : "РУ");
+    }
 
 
     return (
@@ -20,8 +26,14 @@ const Header = () =>{
             <div className={style.headerLeft}>
                 <img src={mainLogo} alt="main Title"/>
 
-                <p className={style.switchLang}>EN</p>
-                <p className={style.switchLangInactive}>РУ</p>
+                <p
+                    className={isActiveLang === "РУ" ? style.switchLang : style.switchLangInactive}
+                    onClick={() => handleClick("EN")}
+                >РУ</p>
+                <p
+                    className={isActiveLang === "EN" ? style.switchLang : style.switchLangInactive}
+                    onClick={() => handleClick("РУ")}
+                >EN</p>
 
             </div>
 
