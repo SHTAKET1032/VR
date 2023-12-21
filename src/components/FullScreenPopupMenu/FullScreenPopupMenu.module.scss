@@ -1,0 +1,37 @@
+.hello{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  //background-color: rgba(6,6,63,0.73);
+  z-index: 1;
+  .container{
+    background-color: rgb(6,6,63);
+    background-image: url("../../assets/imgs/menuBG.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 1600px;
+    padding: 0 45px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .menuLeft, .menuRight{
+      li{
+        color: rgba(255, 255, 255, 0.40);
+        font-size: 42px;
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: 1.26px;
+        text-align: left;
+        padding: 0 0 30px 0;
+        &:hover{
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ import style from "./Home.module.scss"
 import FirstSlide from '../../components/FirstSlide/FirstSlide'
 import mainLogo from '../../assets/imgs/mainLogo.svg'
 import {Redsquere} from "../../components/Redsquere";
+import FullScreenPopupMenu from "../../components/FullScreenPopupMenu/FullScreenPopupMenu";
 
 
 
