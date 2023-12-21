@@ -9,9 +9,9 @@ import './styleSwiper.scss';
 import style from "./Home.module.scss"
 
 import FirstSlide from '../../components/FirstSlide/FirstSlide'
+import SecondSlide from '../../components/SecondSlide/SecondSlide'
 import mainLogo from '../../assets/imgs/mainLogo.svg'
 import {Redsquere} from "../../components/Redsquere";
-import FullScreenPopupMenu from "../../components/FullScreenPopupMenu/FullScreenPopupMenu";
 
 
 
@@ -28,7 +28,7 @@ const Home = () => {
             className="mySwiper"
         >
             <SwiperSlide><FirstSlide/></SwiperSlide>
-            <SwiperSlide><img src={mainLogo} alt="logo"/></SwiperSlide>
+            <SwiperSlide><SecondSlide/></SwiperSlide>
             <SwiperSlide><Redsquere/></SwiperSlide>
         </Swiper>
     )
