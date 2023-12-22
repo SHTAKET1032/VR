@@ -1,9 +1,9 @@
 import {createPortal} from "react-dom";
 import style from "./FullScreenPopupMenu.module.scss"
 
-const portal = document.getElementById('portal')
+// const portal = document.getElementById('portal')
 
-const Menu = ({isMenuOpenChange}) =>
+const Menu = () =>
     createPortal(
         <div className={style.hello}>
             <div className={style.container}>
@@ -23,7 +23,7 @@ const Menu = ({isMenuOpenChange}) =>
                 </ol>
             </div>
         </div>,
-        portal
+        document.body
     )
 
 export default Menu;

@@ -11,6 +11,7 @@ const Header = () =>{
 
     const [isMenuOpen, isMenuOpenChange] = useState(false);
     const [isActiveLang, setActiveLang] = useState("РУ");
+    // const [isRandom, setRandom] = useState("BOX")
 
     const handleClick = (lang) => {
         console.log(`Вы выбрали ${lang} язык`)
@@ -21,7 +22,7 @@ const Header = () =>{
     return (
         <header className={style.header}>
 
-            {isMenuOpen ? <FullScreenPopupMenu/> : null}
+            {isMenuOpen && <FullScreenPopupMenu/>}
 
             <div className={style.headerLeft}>
                 <img src={mainLogo} alt="main Title"/>

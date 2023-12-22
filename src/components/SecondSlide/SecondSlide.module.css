@@ -16,7 +16,7 @@
 .secondSlideContainer .secondSlideContainerLeft, .secondSlideContainer .secondSlideContainerRight {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 }
 .secondSlideContainer .secondSlideContainerLeft .secondSlideImg, .secondSlideContainer .secondSlideContainerRight .secondSlideImg {
   width: 480px;

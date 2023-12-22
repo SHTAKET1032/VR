@@ -7,9 +7,6 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  //background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,4 +19,28 @@
   object-fit: cover;
 }
 
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  left: 0;
+  top: 30%;
+}
+
+.swiper-pagination-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFF;
+  background-color: #3f3ace;
+  border: 2px solid #FFF;
+  border-radius: 20px;
+}
 
