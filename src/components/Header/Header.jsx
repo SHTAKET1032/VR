@@ -10,13 +10,16 @@ import mainLogo from "../../assets/imgs/mainLogo.svg";
 const Header = () =>{
 
     const [isMenuOpen, isMenuOpenChange] = useState(false);
-    const [isActiveLang, setActiveLang] = useState("РУ");
-    // const [isRandom, setRandom] = useState("BOX")
+    const [isActiveLang, setActiveLang] = useState(1);
 
-    const handleClick = (lang) => {
-        console.log(`Вы выбрали ${lang} язык`)
-        setActiveLang(lang === "РУ" ? "EN" : "РУ");
+    const styleRu = `${style.element} ${isActiveLang === 1 ? style.active : style.inactive}`;
+    const styleEn = `${style.element} ${isActiveLang === 2 ? style.active : style.inactive}`;
+
+    const handleClick = (element) => {
+        setActiveLang(element);
     }
+
+
 
 
     return (
@@ -28,23 +31,30 @@ const Header = () =>{
                 <img src={mainLogo} alt="main Title"/>
 
                 <p
-                    className={isActiveLang === "РУ" ? style.switchLang : style.switchLangInactive}
-                    onClick={() => handleClick("EN")}
+                    data-element={1}
+                    className={styleRu}
+                    onClick={() => handleClick(1)}
                 >РУ</p>
                 <p
-                    className={isActiveLang === "EN" ? style.switchLang : style.switchLangInactive}
-                    onClick={() => handleClick("РУ")}
+                    data-element={2}
+                    className={styleEn}
+                    onClick={() => handleClick(2)}
                 >EN</p>
 
             </div>
 
             <div className={style.headerRight}>
 
-                <a href='tel:+7 928 123 45 67' className={style.headerPhone}>+7 928 123 45 67</a>
+                <a
+                    href='tel:+7 928 123 45 67'
+                    className={style.headerPhone}>+7 928 123 45 67
+                </a>
                 <button className={style.btnGetConsultation}>Получить  консультацию</button>
-                <div className={style.burgerMenuIcon} onClick={() => isMenuOpenChange(!isMenuOpen)}>
-                    <div className={style.burgerLineTop}></div>
-                    <div className={style.burgerLineBottom}></div>
+                <div
+                    className={style.burgerMenuIcon}
+                    onClick={() => isMenuOpenChange(!isMenuOpen)}>
+                        <div className={style.burgerLineTop}></div>
+                        <div className={style.burgerLineBottom}></div>
                 </div>
 
             </div>
